@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Navbar from './Compnents/Navbar' 
+import AOS from 'aos';
 
+import Body from './Compnents/Body';
+import Footer from './Compnents/bottom';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const screenConfig = useState(0)
+  return <>
+  <div>
+  <Navbar/>
+  <Body currentScreen = {screenConfig[0]} />
+  <Footer  screenConfig  = {screenConfig}/>
+  
+  </div>
+  </>;
 }
 
 export default App;
