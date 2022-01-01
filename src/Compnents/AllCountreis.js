@@ -1,6 +1,5 @@
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
-import PublicOutlinedIcon from '@mui/icons-material/PublicOutlined';
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
@@ -25,8 +24,7 @@ export default function AllCountreis() {
 
     const data = await response.json();
 
-    let testArray = [];
-    let finalArray = data.data.covid19Stats.filter((item, index) => {
+    let finalArray = data.data.covid19Stats.filter((item) => {
       if (!testArray.includes(item.country)) {
         testArray.push(item.country);
         return item;

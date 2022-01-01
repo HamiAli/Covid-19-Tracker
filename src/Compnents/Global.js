@@ -18,9 +18,6 @@ const style = {
   wordBreak: "break-all",
 };
 
-const boxsh = {
-  boxShadow: "5px 10px 15px #3f51b5",
-};
 const border = {
   border: "1px solid #3f51b5",
 };
