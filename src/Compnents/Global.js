@@ -19,10 +19,10 @@ const style = {
 };
 
 const boxsh = {
-boxShadow :"5px 10px 15px #3f51b5" 
+  boxShadow: "5px 10px 15px #3f51b5",
 };
 const border = {
-border:"1px solid #3f51b5"
+  border: "1px solid #3f51b5",
 };
 export default function Global() {
   const getGlobalApi = async () => {
@@ -55,8 +55,8 @@ export default function Global() {
       <Grid container spacing={3}>
         {Object.keys(global).map((val, index) => {
           return (
-            <Grid   item xs={6} md={4}>
-              <Item style = {border} data-aos="fade-down" elevation={3}>
+            <Grid item xs={6} md={4}>
+              <Item style={border} data-aos="fade-down" elevation={3}>
                 <h3 style={style}> {val.replace(/ _/g, " ").toUpperCase()}</h3>
                 <h3> {global[val]}</h3>
               </Item>
