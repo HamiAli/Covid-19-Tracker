@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Navbar from './Compnents/Navbar' 
-import AOS from 'aos';
 
 import Body from './Compnents/Body';
 import Footer from './Compnents/bottom';
