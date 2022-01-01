@@ -29,8 +29,6 @@ export default function AllCountreis() {
       if (!testArray.includes(item.country)) {
         testArray.push(item.country);
         return item;
-      }else{
-        return <h2>dj</h2>
       }
     });
 
