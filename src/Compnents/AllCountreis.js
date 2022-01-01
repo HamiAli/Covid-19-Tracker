@@ -24,6 +24,7 @@ export default function AllCountreis() {
 
     const data = await response.json();
 
+    let testArray = [];
     let finalArray = data.data.covid19Stats.filter((item) => {
       if (!testArray.includes(item.country)) {
         testArray.push(item.country);
