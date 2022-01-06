@@ -29,7 +29,8 @@ export default function AllCountreis() {
       if (!testArray.includes(item.country)) {
         testArray.push(item.country);
         return item;
-      }
+      }else return console.log()
+
     });
 
     setGlobal(finalArray);
@@ -45,19 +46,33 @@ export default function AllCountreis() {
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell><h2> Country</h2></TableCell>
-            <TableCell><h2>lastUpdate</h2></TableCell>
-            <TableCell><h2>Deaths</h2></TableCell>
+            <TableCell>
+              <h2> Country</h2>
+            </TableCell>
+            <TableCell>
+              <h2>lastUpdate</h2>
+            </TableCell>
+            <TableCell>
+              <h2>Deaths</h2>
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {global.map((val, index) => {
             return (
               <Fragment key={index}>
-                <tr>
-                  <td style={style}><h3> {val.country}</h3> </td>
-                  <td> <h3>{val.lastUpdate}</h3></td>
-                  <td><h3> {val.deaths}</h3></td>
+                <tr >
+                  <td style={style}>
+                    <h3> {val.country}</h3>{" "}
+                  </td>
+                  
+                  <td>
+                    {" "}
+                    <h3>{val.lastUpdate}</h3>
+                  </td>
+                  <td>
+                    <h3> {val.deaths}</h3>
+                  </td>
                 </tr>
               </Fragment>
             );

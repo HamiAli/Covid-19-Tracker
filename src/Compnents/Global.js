@@ -54,7 +54,7 @@ export default function Global() {
           return (
             <Grid key = {ps} item xs={6} md={4}>
               <Item style={border} data-aos="fade-down" elevation={3}>
-                <h3 style={style}> {val.replace(/ _/g, " ").toUpperCase()}</h3>
+                <h3 style={style}> {val}</h3>
                 <h3> {global[val]}</h3>
               </Item>
             </Grid>
